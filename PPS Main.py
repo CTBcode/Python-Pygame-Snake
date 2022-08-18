@@ -1,25 +1,25 @@
-#see how i can imlement GUi and get things moving :D
+#see how I can imlement GUi and get things moving :D
 import pygame
- 
+
 pygame.init()
- 
+
 white = (255, 255, 255)
 black = (0, 0, 0)
 red = (255, 0, 0)
- 
+
 dis = pygame.display.set_mode((800, 600))
 pygame.display.set_caption('Snake Game')
- 
+
 game_over = False
- 
+
 x1 = 300
 y1 = 300
- 
+
 x1_change = 0       
 y1_change = 0
- 
+
 clock = pygame.time.Clock()
- 
+
 while not game_over:
     for event in pygame.event.get():
         if event.type == pygame.QUIT:
@@ -37,7 +37,7 @@ while not game_over:
             elif event.key == pygame.K_DOWN:
                 y1_change = 10
                 x1_change = 0
- 
+
     x1 += x1_change
     y1 += y1_change
     dis.fill(white)
@@ -46,6 +46,6 @@ while not game_over:
     pygame.display.update()
  
     clock.tick(30)
- 
+
 pygame.quit()
 quit()
